@@ -8,12 +8,18 @@ namespace BankProject.Classes
 {
     class Konto
     {
+        private int _KundeCprNr;
         private string _KontoName;
         private int _KontoNr;
-        private int _Saldo;
+        private decimal _Saldo;
         private int _Rente;
         private int _CreateDato;
 
+        public int KundeCprNr
+        {
+            set { _KundeCprNr = value; }
+            get { return _KundeCprNr; }
+        }
 
         public string KontoName
         {
@@ -21,9 +27,7 @@ namespace BankProject.Classes
             get { return _KontoName; }
         }
 
-
-
-        public int Saldo
+        public decimal Saldo
         {
             set { _Saldo = value; }
             get { return _Saldo; }
