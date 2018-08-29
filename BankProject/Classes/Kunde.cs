@@ -49,6 +49,6 @@ namespace BankProject.Classes
             }
             return string.Format($"Kundenr: {CprNr} Name: {Name} LastName: {LastName} Adresse: {Adresse} Telephone: {Telephone} CreateDato: {CreateDato}\r\nAdresser:\r\n{s}");
         }
-
+        
     }
 }
