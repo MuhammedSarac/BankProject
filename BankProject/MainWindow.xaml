@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BankProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None">
+        Title="MainWindow" Height="600" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="170"/>
@@ -18,16 +18,16 @@
 
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <!-- logo and button-->
-        <Border Background="#134187" Grid.Column="0" Grid.Row="0">
+        <Border Background="#134187" Grid.Column="0" Grid.Row="0" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="35">
                     </RowDefinition>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
+
                 <Border Grid.Row="0">
                     <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Image Source="images/icon/piggy-bank.png" Height="24" Width="24"/>
@@ -59,17 +59,26 @@
         </Border>
 
         <!-- mini button and header-->
-        <Border Background="#134187" Grid.Column="1" Grid.Row="0">
+        <Border Background="#134187" Grid.Column="1" Grid.Row="0"  x:Name="brd_rightup" MouseDown="brd_rightup_MouseDown">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="35"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Border Background="White">
-                    <DockPanel Width="72" HorizontalAlignment="Right">
-                        <Button Content="__" Style="{DynamicResource minibuttons}"/>
-                        <Button Content="X"  x:Name="btn_close" Click="btn_close_Click" Style="{DynamicResource minibuttons}"/>
+                <Border Background="White" Grid.Row="0">
+                    <DockPanel Width="100" HorizontalAlignment="Right">
+                        <Button Content="__" Style="{DynamicResource minibuttons}" FontSize="12"/>
+                        <Button Content="| |" Style="{DynamicResource minibuttons}" FontSize="12"/>
+                        <Button Content="X"  x:Name="btn_close" FontSize="12" Click="btn_close_Click" Style="{DynamicResource minibuttons}"/>
                     </DockPanel>
+                </Border>
+                <Border Grid.Row="1">
+                    <Grid>
+
+                        <Border>
+                            <Label Content="SARAC BANK" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" FontWeight="Bold" FontStyle="Italic"/>
+                        </Border>
+                    </Grid>
                 </Border>
             </Grid>
 
@@ -77,53 +86,65 @@
 
         <!-- side panel menu-->
         <Border Background="#134187" Grid.Column="0" Grid.Row="1">
-            <StackPanel>
-                <Button Height="50" Style="{DynamicResource menubuttons}">
-                    <DockPanel Height="50">
-                        <Image Source="images/user.png" Height="50" Width="50" HorizontalAlignment="Left"/>
+            <StackPanel >
+                <Button Height="50" Style="{DynamicResource menubuttons}" x:Name="AddKundeBtn" Click="AddKundeBtn_Click">
+                    <DockPanel Width="220" Height="50" Margin="15,0,0,0">
+                        <Image Source="images/user.png" Height="50" Width="50" />
                         <Label Content="Opret Kunde" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" Style="{DynamicResource menubuttons}">
-                    <DockPanel Height="50">
-                        <Image Source="images/file.png" Height="50" Width="50" HorizontalAlignment="Left"/>
+                    <DockPanel Width="220" Height="50" Margin="15,0,0,0">
+                        <Image Source="images/file.png" Height="50" Width="50" />
                         <Label Content="Opret Konto" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" Style="{DynamicResource menubuttons}">
-                    <DockPanel Height="50">
-                        <Image Source="images/searchkonto.png" Height="50" Width="50" HorizontalAlignment="Left"/>
+                    <DockPanel Width="220" Height="50" Margin="15,0,0,0">
+                        <Image Source="images/searchkonto.png" Height="50" Width="50" />
                         <Label Content="Søg Kunde" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" Style="{DynamicResource menubuttons}">
-                    <DockPanel Height="50">
-                        <Image Source="images/moneyadd.png" Height="50" Width="50" HorizontalAlignment="Left"/>
+                    <DockPanel Width="220" Height="50" Margin="15,0,0,0">
+                        <Image Source="images/moneyadd.png" Height="50" Width="50" />
                         <Label Content="Indsæt penge" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" Style="{DynamicResource menubuttons}">
-                    <DockPanel Height="50">
-                        <Image Source="images/moneyrec.png" Height="50" Width="50" HorizontalAlignment="Left"/>
+                    <DockPanel Width="220" Height="50" Margin="15,0,0,0">
+                        <Image Source="images/moneyrec.png" Height="50" Width="50" />
                         <Label Content="Udbetal penge" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" Style="{DynamicResource menubuttons}">
-                    <DockPanel Height="50">
-                        <Image Source="images/delete.png" Height="50" Width="50" HorizontalAlignment="Left"/>
+                    <DockPanel Width="220" Height="50" Margin="15,0,0,0">
+                        <Image Source="images/delete.png" Height="50" Width="50" />
                         <Label Content="Slette Kunde" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" Style="{DynamicResource menubuttons}">
-                    <DockPanel Height="50">
-                        <Image Source="images/delete.png" Height="50" Width="50" HorizontalAlignment="Left"/>
+                    <DockPanel Width="220" Height="50" Margin="15,0,0,0">
+                        <Image Source="images/delete.png" Height="50" Width="50"/>
                         <Label Content="Slette Konto" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </DockPanel>
                 </Button>
-            </StackPanel>
-            
-            
 
+
+                <Label Content="Slette Konto" Foreground="Black"  FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="ConnectionStatus"/>
+
+
+            </StackPanel>
+
+
+
+        </Border>
+
+        <!--Content to Uc-->
+        <Border Grid.Column="1" Grid.Row="1" Background="#FFEEEEEE">
+            <Grid x:Name="ContentSide">
+
+            </Grid>
         </Border>
 
     </Grid>
