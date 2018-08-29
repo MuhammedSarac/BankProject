@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BankProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded">
+        Title="MainWindow" Height="600" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" Icon="Images/Icon/piggy-bank.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="170"/>
@@ -67,8 +67,8 @@
                 </Grid.RowDefinitions>
                 <Border Background="White" Grid.Row="0">
                     <DockPanel Width="100" HorizontalAlignment="Right">
-                        <Button Content="__" Style="{DynamicResource minibuttons}" FontSize="12"/>
-                        <Button Content="| |" Style="{DynamicResource minibuttons}" FontSize="12"/>
+                        <Button Content="__" x:Name="btn_minimize" Click="btn_minimize_Click" Style="{DynamicResource minibuttons}" FontSize="12"/>
+                        <Button Content="| |" x:Name="btn_fullscreen" Click="btn_fullscreen_Click" Style="{DynamicResource minibuttons}" FontSize="12"/>
                         <Button Content="X"  x:Name="btn_close" FontSize="12" Click="btn_close_Click" Style="{DynamicResource minibuttons}"/>
                     </DockPanel>
                 </Border>

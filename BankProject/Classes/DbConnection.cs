@@ -10,6 +10,7 @@ namespace BankProject.Classes
 {
     public class DbConnection
     {
+        //DB Connection
         public static string DbAdress = @"Data Source=" + Environment.CurrentDirectory + "\\DB\\Bank.db;Version=3;New=False;Compress=True,Read Only= False;";
         public static string ConStatus;
 
