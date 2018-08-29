@@ -66,5 +66,13 @@ namespace BankProject
                 this.WindowState = WindowState.Normal; 
             }
         }
+        MainWindow ok = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+        private void btn_opretkonto_Click(object sender, RoutedEventArgs e)
+        {
+            AddKonto add = new AddKonto();
+            add.Owner = ok;
+            //ok.Opacity = 0.3;
+            add.ShowDialog();
+        }
     }
 }

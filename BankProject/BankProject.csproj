@@ -73,11 +73,52 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddKonto.xaml.cs">
+      <DependentUpon>AddKonto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddKunde.xaml.cs">
+      <DependentUpon>AddKunde.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DbConnection.cs" />
     <Compile Include="Classes\UcCall.cs" />
+    <Compile Include="deleteKonto.xaml.cs">
+      <DependentUpon>deleteKonto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="deletekunde.xaml.cs">
+      <DependentUpon>deletekunde.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Indsatpenge.xaml.cs">
+      <DependentUpon>Indsatpenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Searchkunde.xaml.cs">
+      <DependentUpon>Searchkunde.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Udbetalpenge.xaml.cs">
+      <DependentUpon>Udbetalpenge.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User control\ucAddKunde.xaml.cs">
       <DependentUpon>ucAddKunde.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddKonto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddKunde.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="deleteKonto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="deletekunde.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Indsatpenge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,6 +133,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Searchkunde.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Udbetalpenge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="User control\ucAddKunde.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

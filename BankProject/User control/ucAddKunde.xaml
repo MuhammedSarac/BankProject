@@ -20,7 +20,7 @@
 
         <Border Background="White" Grid.Row="1">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Style="{DynamicResource KundeAddBtn}" Content=" Opret Kunde" ></Button>
+            <Button Style="{DynamicResource KundeAddBtn}" Content=" Opret Kunde" x:Name="btn_addkunde" Click="btn_addkunde_Click" ></Button>
             </StackPanel>
         </Border>
     </Grid>

@@ -87,13 +87,9 @@
         <!-- side panel menu-->
         <Border Background="#134187" Grid.Column="0" Grid.Row="1">
             <StackPanel >
-                <Button Height="50" Style="{DynamicResource menubuttons}" x:Name="AddKundeBtn" Click="AddKundeBtn_Click">
-                    <DockPanel Width="220" Height="50" Margin="15,0,0,0">
-                        <Image Source="images/user.png" Height="50" Width="50" />
-                        <Label Content="Opret Kunde" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    </DockPanel>
-                </Button>
-                <Button Height="50" Style="{DynamicResource menubuttons}">
+              
+                
+                <Button Height="50" x:Name="btn_opretkonto" Click="btn_opretkonto_Click" Style="{DynamicResource menubuttons}">
                     <DockPanel Width="220" Height="50" Margin="15,0,0,0">
                         <Image Source="images/file.png" Height="50" Width="50" />
                         <Label Content="Opret Konto" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
