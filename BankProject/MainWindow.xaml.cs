@@ -46,6 +46,8 @@ namespace BankProject
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             UcCall.UcAdd(ContentSide, new ucAddKunde());
+            DbConnection.ConTest();
+            ConnectionStatus.Content = DbConnection.ConStatus;
         }
     }
 }

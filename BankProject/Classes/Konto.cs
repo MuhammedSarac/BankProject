@@ -8,12 +8,18 @@ namespace BankProject.Classes
 {
     class Konto
     {
+        private int _KundeCprNr;
         private string _KontoName;
         private int _KontoNr;
-        private int _Saldo;
+        private decimal _Saldo;
         private int _Rente;
         private int _CreateDato;
 
+        public int KundeCprNr
+        {
+            set { _KundeCprNr = value; }
+            get { return _KundeCprNr; }
+        }
 
         public string KontoName
         {
@@ -21,9 +27,7 @@ namespace BankProject.Classes
             get { return _KontoName; }
         }
 
-
-
-        public int Saldo
+        public decimal Saldo
         {
             set { _Saldo = value; }
             get { return _Saldo; }
@@ -47,8 +51,9 @@ namespace BankProject.Classes
             set => _KontoNr = value;
         }
 
-        public Konto(string kontoname, int kontonr, int saldo, int rente, int dato)
+        public Konto(int kundecprnr, string kontoname, int kontonr, int saldo, int rente, int dato)
         {
+            KundeCprNr = kundecprnr;
             KontoName = kontoname;
             KontoNr = kontonr;
             Saldo = saldo;
@@ -57,7 +62,7 @@ namespace BankProject.Classes
         }
         public override string ToString()
         {
-            return string.Format($"Konto Navn: {KontoName} Kontonr: {KontoNr} Saldo: {Saldo} Rente: {Rente} OprettelsesDato {CreateDato}");
+            return string.Format($"Kunde Cpr Nr: {KundeCprNr}Konto Navn: {KontoName} Kontonr: {KontoNr} Saldo: {Saldo} Rente: {Rente} OprettelsesDato {CreateDato}");
         }
     }
 }

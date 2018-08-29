@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace BankProject.Classes
 {
-
     class Kunde
     {
-        private int _Nr;
+        private int _CprNr;
         private string _Name;
         private string _LastName;
         private string _Adresse;
@@ -21,14 +20,14 @@ namespace BankProject.Classes
         public string Name { get => _Name; set => _Name = value; }
         public string LastName { get => _LastName; set => _LastName = value; }
         public string Adresse { get => _Adresse; set => _Adresse = value; }
-        public int Nr { get => _Nr; set => _Nr = value; }
+        public int CprNr { get => _CprNr; set => _CprNr = value; }
         public int Telephone { get => _Telephone; set => _Telephone = value; }
         public int CreateDato { get => _CreateDato; set => _CreateDato = value; }
 
 
-        public Kunde(int nr, string name, string lastName, string adresse, int telephone, int createDato)
+        public Kunde(int cprnr, string name, string lastName, string adresse, int telephone, int createDato)
         {
-            Nr = nr;
+            CprNr = cprnr;
             Name = name;
             LastName = lastName;
             Adresse = adresse;
@@ -48,7 +47,7 @@ namespace BankProject.Classes
             {
                 s = s + " " + item + Environment.NewLine;
             }
-            return string.Format($"Kundenr: {Nr} Name: {Name} LastName: {LastName} Adresse: {Adresse} Telephone: {Telephone} CreateDato: {CreateDato}\r\nAdresser:\r\n{s}");
+            return string.Format($"Kundenr: {CprNr} Name: {Name} LastName: {LastName} Adresse: {Adresse} Telephone: {Telephone} CreateDato: {CreateDato}\r\nAdresser:\r\n{s}");
         }
 
     }
