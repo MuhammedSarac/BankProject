@@ -9,7 +9,7 @@
     <Grid>
 
         <Canvas Margin="0,0,10,0" Grid.ColumnSpan="2">
-            <Rectangle Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1"/>
+            <Rectangle x:Name="header_search" Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1" MouseDown="header_search_MouseDown"/>
             <Label Content="Søg Kunde" Canvas.Left="389" Canvas.Top="31" Panel.ZIndex="2" Width="116" FontSize="16"/>
             <Border Height="333" Width="408" Canvas.Left="246" Canvas.Top="31" Background="#FFF3EEEE">
                 <Border.Effect>
@@ -17,11 +17,11 @@
                 </Border.Effect>
             </Border>
             <Label Content="kundecpr : " Height="27" Width="66" Canvas.Left="263" Canvas.Top="83"/>
-            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21"/>
+            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21" x:Name="txt_kundecpr"/>
 
 
 
-            <Button Content="Søg" Canvas.Left="428" Canvas.Top="123" Width="77" x:Name="btn_search"></Button>
+            <Button Content="Søg" Canvas.Left="428" Canvas.Top="123" Width="77" x:Name="btn_search" Click="btn_search_Click"></Button>
             <Button Content="Vis alle " Canvas.Left="428" Canvas.Top="158" Width="77"/>
 
             <Button Content="X"  x:Name="btnsearch_close" FontSize="12" Click="btnsearch_close_Click" Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>

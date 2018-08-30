@@ -28,5 +28,23 @@ namespace BankProject
         {
             this.Close();
         }
+
+        private void header_deletekunde_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+                this.DragMove();
+        }
+
+        private void slet_opret_Click(object sender, RoutedEventArgs e)
+        {
+            if (txt_kundecpr.Text != "")
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Udfyld alle felter!!");
+            }
+        }
     }
 }

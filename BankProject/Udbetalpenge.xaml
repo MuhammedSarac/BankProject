@@ -8,20 +8,18 @@
         Title="Udbetalpenge" Height="450" Width="800" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
     <Grid>
         <Canvas Margin="0,0,10,0">
-            <Rectangle Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1"/>
+            <Rectangle x:Name="header_udbetal" Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1" MouseDown="header_udbetal_MouseDown"/>
             <Label Content="Udbetal penge" Canvas.Left="389" Canvas.Top="31" Panel.ZIndex="2" Width="116" FontSize="16"/>
-            <Border Height="333" Width="408" Canvas.Left="246" Canvas.Top="31" Background="#FFF3EEEE" >
-                <Border.Effect>
-                    <DropShadowEffect/>
-                </Border.Effect>
+            <Border  Height="333" Width="408" Canvas.Left="246" Canvas.Top="31" Background="#FFF3EEEE" >
+               
             </Border>
             <Label Content="Konto : " Height="27" Width="66" Canvas.Left="263" Canvas.Top="83"/>
-            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21"/>
+            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21" x:Name="txt_konto"/>
             <Label Content="Beløb: " Canvas.Left="263" Canvas.Top="110"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="110" Height="21"/>
+            <TextBox Width="163" Canvas.Left="342" Canvas.Top="110" Height="21" x:Name="txt_belob"/>
 
 
-            <Button Content="Udbetal" Canvas.Left="428" Canvas.Top="146" Width="77" x:Name="udbetal_opret" ></Button>
+            <Button Content="Udbetal" Canvas.Left="428" Canvas.Top="146" Width="77" x:Name="udbetal_opret" Click="udbetal_opret_Click"></Button>
             <Button Content="X"  x:Name="btnudbetal_close" FontSize="12" Click="btnudbetal_close_Click" Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22" />
 
 

@@ -29,12 +29,25 @@ namespace BankProject
 
         private void kontobtn_opret_Click(object sender, RoutedEventArgs e)
         {
-            DbConnection.ConTest();
+            if (txt_kundecpr.Text != "" && txt_saldo.Text != "" && txt_rente.Text != "" && txt_konto.Text != "" && txt_dato.Text != "")
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Udfyld alle felter!!");
+            }
         }
 
         private void btnkonto_close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void header_addkonto_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+                this.DragMove();
         }
     }
 }

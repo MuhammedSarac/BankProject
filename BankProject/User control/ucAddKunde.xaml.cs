@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,11 @@ namespace BankProject.User_control
             add.Owner = gk;
             gk.Opacity = 0.3;
             add.ShowDialog();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            dbtask.Gridlist(dtg_kunde_list);
         }
     }
 }

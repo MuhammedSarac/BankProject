@@ -80,6 +80,7 @@
       <DependentUpon>AddKunde.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\DbConnection.cs" />
+    <Compile Include="Classes\dbtask.cs" />
     <Compile Include="Classes\UcCall.cs" />
     <Compile Include="deleteKonto.xaml.cs">
       <DependentUpon>deleteKonto.xaml</DependentUpon>

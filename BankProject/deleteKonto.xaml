@@ -9,7 +9,7 @@
     <Grid>
 
         <Canvas Margin="0,0,10,0" Grid.ColumnSpan="2">
-            <Rectangle Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1"/>
+            <Rectangle x:Name="header_deletekonto"  Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1" MouseDown="header_deletekonto_MouseDown"/>
             <Label Content="Slet Konto" Canvas.Left="389" Canvas.Top="31" Panel.ZIndex="2" Width="116" FontSize="16"/>
             <Border Height="333" Width="408" Canvas.Left="246" Canvas.Top="31" Background="#FFF3EEEE">
                 <Border.Effect>
@@ -17,12 +17,12 @@
                 </Border.Effect>
             </Border>
             <Label Content="Kundecpr : " Height="27" Width="66" Canvas.Left="263" Canvas.Top="83"/>
-            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21"/>
+            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21" x:Name="txt_kundecpr"/>
             <Label Content="Konto: " Canvas.Left="263" Canvas.Top="110"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="110" Height="21"/>
+            <TextBox Width="163" Canvas.Left="342" Canvas.Top="110" Height="21" x:Name="txt_konto"/>
 
 
-            <Button Content="Slet" Canvas.Left="428" Canvas.Top="146" Width="77" x:Name="delete_opret" ></Button>
+            <Button Content="Slet" Canvas.Left="428" Canvas.Top="146" Width="77" x:Name="delete_opret" Click="delete_opret_Click"></Button>
             <Button Content="X"  x:Name="btndelete_close" FontSize="12" Click="btndelete_close_Click" Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>
 
 

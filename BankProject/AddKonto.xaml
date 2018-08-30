@@ -8,7 +8,7 @@
         Title="AddKonto" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}">
     <Grid>
         <Canvas Margin="0,0,10,0">
-            <Rectangle Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1"/>
+            <Rectangle x:Name="header_addkonto" Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1" MouseDown="header_addkonto_MouseDown"/>
             <Label Content="Opret Konto" Canvas.Left="389" Canvas.Top="31" Panel.ZIndex="2" Width="116" FontSize="16"/>
             <Border Height="333" Width="408" Canvas.Left="246" Canvas.Top="31" Background="#FFF3EEEE">
                 <Border.Effect>
@@ -16,19 +16,19 @@
                 </Border.Effect>
             </Border>
             <Label Content="Kunde cpr:" Canvas.Left="263" Canvas.Top="83"/>
-            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21"/>
+            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21" x:Name="txt_kundecpr"/>
             <Label Content="Konto : " Height="27" Width="66" Canvas.Left="263" Canvas.Top="110"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="110" Height="21"/>
+            <TextBox Width="163" Canvas.Left="342" Canvas.Top="110" Height="21" x:Name="txt_konto"/>
             <Label Content="Kontonr : " Canvas.Left="263" Canvas.Top="136"/>
-            <TextBox  Canvas.Top="136" Width="163" Canvas.Left="342" Height="21"/>
+            <TextBox  Canvas.Top="136" Width="163" Canvas.Left="342" Height="21" x:Name="txt_kontonr"/>
             <Label Content="Saldo :" Canvas.Left="263" Canvas.Top="162" Width="71"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="162" Height="21"/>
+            <TextBox Width="163" Canvas.Left="342" Canvas.Top="162" Height="21" x:Name="txt_saldo"/>
 
             
             <Label Content="Rente :" Canvas.Left="264" Canvas.Top="188" Width="66"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="188" Height="21"/>
+            <TextBox Width="163" Canvas.Left="342" Canvas.Top="188" Height="21" x:Name="txt_rente"/>
             <Label Content="Dato :" Canvas.Left="264" Canvas.Top="214"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="214" Height="21"/>
+            <TextBox Width="163" Canvas.Left="342" Canvas.Top="214" Height="21" x:Name="txt_dato"/>
 
             <Button Content="Opret" Canvas.Left="428" Canvas.Top="250" Width="77" x:Name="kontobtn_opret" Click="kontobtn_opret_Click"></Button>
 

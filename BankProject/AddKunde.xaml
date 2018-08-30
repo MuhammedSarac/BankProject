@@ -8,7 +8,7 @@
         Title="AddKunde" Height="400" Width="900" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
     <Grid>
         <Canvas Margin="0,0,10,0">
-            <Rectangle Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1"/>
+            <Rectangle x:Name="header_addkunde" Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1" MouseDown="header_addkunde_MouseDown"/>
             <Label Content="Opret Kunde" Canvas.Left="389" Canvas.Top="31" Panel.ZIndex="2" Width="116" FontSize="16"/>
             <Border Height="333" Width="408" Canvas.Left="246" Canvas.Top="31" Background="#FFF3EEEE">
                 <Border.Effect>
@@ -16,17 +16,17 @@
                 </Border.Effect>
             </Border>
             <Label Content="Name: " Height="27" Width="66" Canvas.Left="263" Canvas.Top="83"/>
-            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21"/>
+            <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21" x:Name="txt_name"/>
             <Label Content="Efternavn: " Canvas.Left="263" Canvas.Top="110"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="110" Height="21"/>
+            <TextBox Width="163" Canvas.Left="342" Canvas.Top="110" Height="21" x:Name="txt_eftername"/>
             <Label Content="Cprnr: " Canvas.Left="263" Canvas.Top="136" Width="71"/>
-            <TextBox  Canvas.Top="136" Width="163" Canvas.Left="342" Height="21">
+            <TextBox  Canvas.Top="136" Width="163" Canvas.Left="342" Height="21" x:Name="txt_cprnr">
 
             </TextBox>
             <Label Content="Adresse:" Canvas.Left="263" Canvas.Top="162" Width="66"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="162" Height="21"/>
+            <TextBox Width="163" Canvas.Left="342" Canvas.Top="162" Height="21" x:Name="txt_adresse" />
             <Label Content="Dato:" Canvas.Left="263" Canvas.Top="188"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="188" Height="21"/>
+            <TextBox Width="163" Canvas.Left="342" Canvas.Top="188" Height="21" x:Name="txt_date"/>
 
             <Button Content="Opret" Canvas.Left="428" Canvas.Top="230" Width="77" x:Name="btn_opret" Click="btn_opret_Click"></Button>
 
