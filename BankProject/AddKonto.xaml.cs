@@ -29,26 +29,12 @@ namespace BankProject
 
         private void kontobtn_opret_Click(object sender, RoutedEventArgs e)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(DbConnection.DbAdress))
-            {
-                if (conn.State == ConnectionState.Closed)
-                {
-                    try
-                    {
-                        conn.Open();
+            DbConnection.ConTest();
+        }
 
-                    }
-                    catch (Exception)
-                    {
-
-                        DbConnection.ConStatus = "Connection Faild..";
-                    }
-                }
-                else
-                {
-
-                }
-            }
+        private void btnkonto_close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

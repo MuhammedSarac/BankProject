@@ -21,13 +21,10 @@
 
 
 
-            <Button Content="Søg" Canvas.Left="428" Canvas.Top="123" Width="77" x:Name="btn_opret" Click="btn_opret_Click"></Button>
+            <Button Content="Søg" Canvas.Left="428" Canvas.Top="123" Width="77" x:Name="btn_search"></Button>
             <Button Content="Vis alle " Canvas.Left="428" Canvas.Top="158" Width="77"/>
 
-
-
-
-
+            <Button Content="X"  x:Name="btnsearch_close" FontSize="12" Click="btnsearch_close_Click" Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>
         </Canvas>
 
     </Grid>

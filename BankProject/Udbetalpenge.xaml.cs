@@ -23,5 +23,13 @@ namespace BankProject
         {
             InitializeComponent();
         }
+
+        private void btnudbetal_close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+      
+       
     }
 }

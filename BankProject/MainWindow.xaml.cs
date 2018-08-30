@@ -74,5 +74,45 @@ namespace BankProject
             //ok.Opacity = 0.3;
             add.ShowDialog();
         }
+
+        private void sog_kunde_Click(object sender, RoutedEventArgs e)
+        {
+            Searchkunde add = new Searchkunde();
+            add.Owner = ok;
+            //ok.Opacity = 0.3;
+            add.ShowDialog();
+        }
+
+        private void indsat_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Indsatpenge add = new Indsatpenge();
+            add.Owner = ok;
+            //ok.Opacity = 0.3;
+            add.ShowDialog();
+        }
+
+        private void udbetal_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Udbetalpenge add = new Udbetalpenge();
+            add.Owner = ok;
+            //ok.Opacity = 0.3;
+            add.ShowDialog();
+        }
+
+        private void slet_kunde_Click(object sender, RoutedEventArgs e)
+        {
+            deletekunde add = new deletekunde();
+            add.Owner = ok;
+            //ok.Opacity = 0.3;
+            add.ShowDialog();
+        }
+
+        private void slet_konto_Click(object sender, RoutedEventArgs e)
+        {
+            deleteKonto add = new deleteKonto();
+            add.Owner = ok;
+            //ok.Opacity = 0.3;
+            add.ShowDialog();
+        }
     }
 }

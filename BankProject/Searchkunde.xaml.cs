@@ -23,5 +23,10 @@ namespace BankProject
         {
             InitializeComponent();
         }
+
+        private void btnsearch_close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

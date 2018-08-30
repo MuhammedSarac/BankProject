@@ -21,11 +21,9 @@
           
 
 
-            <Button Content="Slet" Canvas.Left="428" Canvas.Top="124" Width="77" x:Name="btn_opret" Click="btn_opret_Click"></Button>
+            <Button Content="Slet" Canvas.Left="428" Canvas.Top="124" Width="77" x:Name="slet_opret" ></Button>
 
-
-
-
+            <Button Content="X"  x:Name="deltekunde_close" Click="deltekunde_close_Click" FontSize="12"  Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>
 
         </Canvas>
 

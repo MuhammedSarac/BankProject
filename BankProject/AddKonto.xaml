@@ -32,9 +32,7 @@
 
             <Button Content="Opret" Canvas.Left="428" Canvas.Top="250" Width="77" x:Name="kontobtn_opret" Click="kontobtn_opret_Click"></Button>
 
-
-
-
+            <Button Content="X"  x:Name="btnkonto_close" FontSize="12" Click="btnkonto_close_Click" Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>
 
         </Canvas>
 

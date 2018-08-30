@@ -30,7 +30,7 @@
 
             <Button Content="Opret" Canvas.Left="428" Canvas.Top="230" Width="77" x:Name="btn_opret" Click="btn_opret_Click"></Button>
 
-
+            <Button Content="X"  x:Name="btnkunde_close" FontSize="12" Click="btnkunde_close_Click" Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>
 
 
 
