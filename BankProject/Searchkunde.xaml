@@ -22,9 +22,11 @@
 
 
             <Button Content="Søg" Canvas.Left="428" Canvas.Top="123" Width="77" x:Name="btn_search" Click="btn_search_Click"></Button>
-            <Button Content="Vis alle " Canvas.Left="428" Canvas.Top="158" Width="77"/>
+            <Button Content="Vis alle " Canvas.Left="428" Canvas.Top="158" Width="77" x:Name="showall" Click="showall_Click"/>
 
             <Button Content="X"  x:Name="btnsearch_close" FontSize="12" Click="btnsearch_close_Click" Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>
+            <DataGrid  x:Name="dtg_searchedkunde" ItemsSource="{Binding}" BorderBrush="{x:Null}" BorderThickness="0" Height="169" Width="408" Canvas.Left="246" Canvas.Top="195"></DataGrid>
+
         </Canvas>
 
     </Grid>

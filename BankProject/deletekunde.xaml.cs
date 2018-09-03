@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,7 @@ namespace BankProject
         {
             if (txt_kundecpr.Text != "")
             {
+                dbtask.DeleteKunde(Convert.ToInt64(txt_kundecpr.Text));
 
             }
             else

@@ -30,13 +30,19 @@ namespace BankProject.User_control
         {
             AddKunde add = new AddKunde();
             add.Owner = gk;
-            gk.Opacity = 0.3;
+            //gk.Opacity = 0.3;
             add.ShowDialog();
+
+           
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             dbtask.Gridlist(dtg_kunde_list);
         }
+
+       
+        
+
     }
 }

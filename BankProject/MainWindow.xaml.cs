@@ -74,9 +74,11 @@ namespace BankProject
             //ok.Opacity = 0.3;
             add.ShowDialog();
         }
-
+        MainWindow gk = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
         private void sog_kunde_Click(object sender, RoutedEventArgs e)
         {
+
+
             Searchkunde add = new Searchkunde();
             add.Owner = ok;
             //ok.Opacity = 0.3;
@@ -110,6 +112,14 @@ namespace BankProject
         private void slet_konto_Click(object sender, RoutedEventArgs e)
         {
             deleteKonto add = new deleteKonto();
+            add.Owner = ok;
+            //ok.Opacity = 0.3;
+            add.ShowDialog();
+        }
+
+        private void Saldo_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Saldo add = new Saldo();
             add.Owner = ok;
             //ok.Opacity = 0.3;
             add.ShowDialog();

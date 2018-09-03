@@ -26,7 +26,7 @@
             <Label Content="Adresse:" Canvas.Left="263" Canvas.Top="162" Width="66"/>
             <TextBox Width="163" Canvas.Left="342" Canvas.Top="162" Height="21" x:Name="txt_adresse" />
             <Label Content="Dato:" Canvas.Left="263" Canvas.Top="188"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="188" Height="21" x:Name="txt_date"/>
+            <DatePicker Width="163" Canvas.Left="342" Canvas.Top="188" Height="21" x:Name="txt_date"/>
 
             <Button Content="Opret" Canvas.Left="428" Canvas.Top="230" Width="77" x:Name="btn_opret" Click="btn_opret_Click"></Button>
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BankProject.Classes;
+using BankProject.User_control;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,17 +36,35 @@ namespace BankProject
             if (Mouse.LeftButton == MouseButtonState.Pressed)
                 this.DragMove();
         }
-
+        MainWindow gk = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
         private void btn_search_Click(object sender, RoutedEventArgs e)
         {
-            if (txt_kundecpr.Text != "" )
+
+
+            if (txt_kundecpr.Text != "")
             {
+                
+                if (dbtask.Gridlistkunde(grd: dtg_searchedkunde, input: Convert.ToInt64(txt_kundecpr.Text))) 
+                {
+                   
+                }
+                else
+                {
+                    
+                }
 
             }
             else
             {
                 MessageBox.Show("Udfyld alle felter!!");
             }
+        }
+
+        private void showall_Click(object sender, RoutedEventArgs e)
+        {
+            dbtask.Gridlist(dtg_searchedkunde);
+
+
         }
     }
 }

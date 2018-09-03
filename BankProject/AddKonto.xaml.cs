@@ -29,8 +29,18 @@ namespace BankProject
 
         private void kontobtn_opret_Click(object sender, RoutedEventArgs e)
         {
-            if (txt_kundecpr.Text != "" && txt_saldo.Text != "" && txt_rente.Text != "" && txt_konto.Text != "" && txt_dato.Text != "")
+            if (txt_kundecpr.Text != "" && txt_saldo.Text != "" && txt_rente.Text != "" && txt_konto.Text != "" && txt_dato.Text != "" && txt_kontonr.Text != "")
             {
+                Konto konto = new Konto(Convert.ToInt64(txt_kundecpr.Text),txt_konto.Text, Convert.ToInt64(txt_kontonr.Text), Convert.ToDouble(txt_saldo.Text), Convert.ToDouble(txt_rente.Text), txt_dato.Text);
+
+                if (dbtask.Addkonto(konto))
+                {
+                    MessageBox.Show("Konto oprettet");
+                }
+                else
+                {
+                    MessageBox.Show("fejll");
+                }
 
             }
             else

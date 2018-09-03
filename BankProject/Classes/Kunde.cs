@@ -13,7 +13,7 @@ namespace BankProject.Classes
         private string _LastName;
         private string _Adresse;
         //private int _Telephone;
-        private long _CreateDato;
+        private string _CreateDato;
         public List<Konto> Konto = new List<Konto>();
 
 
@@ -22,10 +22,10 @@ namespace BankProject.Classes
         public string Adresse { get => _Adresse; set => _Adresse = value; }
         public long CprNr { get => _CprNr; set => _CprNr = value; }
         //public int Telephone { get => _Telephone; set => _Telephone = value; }
-        public long CreateDato { get => _CreateDato; set => _CreateDato = value; }
+        public string CreateDato { get => _CreateDato; set => _CreateDato = value; }
 
 
-        public Kunde(long cprnr, string name, string lastName, string adresse, long createDato)
+        public Kunde(long cprnr, string name, string lastName, string adresse, string createDato)
         {
             CprNr = cprnr;
             Name = name;

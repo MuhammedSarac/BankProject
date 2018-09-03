@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,9 +38,9 @@ namespace BankProject
 
         private void delete_opret_Click(object sender, RoutedEventArgs e)
         {
-            if (txt_kundecpr.Text != ""&& txt_konto.Text != "")
+            if ( txt_konto.Text != "")
             {
-
+                dbtask.DeleteKonto(Convert.ToInt64(txt_konto.Text));
             }
             else
             {

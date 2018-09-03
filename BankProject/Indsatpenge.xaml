@@ -19,9 +19,10 @@
             <TextBox Width="163" RenderTransformOrigin="0.441,0.485" Canvas.Left="342" Canvas.Top="83" Height="21" x:Name="txt_konto"/>
             <Label Content="Beløb: " Canvas.Left="263" Canvas.Top="110"/>
             <TextBox Width="163" Canvas.Left="342" Canvas.Top="110" Height="21" x:Name="txt_belob"/>
+            <Label Content="Dato: " Canvas.Left="263" Canvas.Top="136"/>
+            <DatePicker Width="163" Canvas.Left="342" Canvas.Top="141" Height="21" x:Name="txt_date"/>
 
-
-            <Button Content="Indsæt" Canvas.Left="428" Canvas.Top="146" Width="77" x:Name="indsat_opret" Click="indsat_opret_Click" ></Button>
+            <Button Content="Indsæt" Canvas.Left="428" Canvas.Top="184" Width="77" x:Name="indsat_opret" Click="indsat_opret_Click" ></Button>
             <Button Content="X"  x:Name="btnindsat_close" FontSize="12" Click="btnindsat_close_Click" Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>
 
 

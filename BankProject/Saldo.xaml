@@ -1,16 +1,15 @@
-﻿<Window x:Class="BankProject.deleteKonto"
+﻿<Window x:Class="BankProject.Saldo"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BankProject"
         mc:Ignorable="d"
-        Title="deleteKonto" Height="450" Width="800" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
+        Title="Saldo" Height="450" Width="800">
     <Grid>
-
         <Canvas Margin="0,0,10,0" Grid.ColumnSpan="2">
-            <Rectangle x:Name="header_deletekonto"  Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1" MouseDown="header_deletekonto_MouseDown"/>
-            <Label Content="Slet Konto" Canvas.Left="389" Canvas.Top="31" Panel.ZIndex="2" Width="116" FontSize="16"/>
+            <Rectangle x:Name="header_saldokonto"  Height="38" Width="408" Canvas.Left="246" Canvas.Top="31" Fill="#FF134187" Panel.ZIndex="1" MouseDown="header_saldokonto_MouseDown"/>
+            <Label Content="Saldo" Canvas.Left="428" Canvas.Top="33" Panel.ZIndex="2" Width="116" FontSize="16"/>
             <Border Height="333" Width="408" Canvas.Left="246" Canvas.Top="31" Background="#FFF3EEEE">
                 <Border.Effect>
                     <DropShadowEffect/>
@@ -21,10 +20,11 @@
             <TextBox Width="163" Canvas.Left="342" Canvas.Top="83" Height="21" x:Name="txt_konto"/>
 
 
-            <Button Content="Slet" Canvas.Left="428" Canvas.Top="129" Width="77" x:Name="delete_opret" Click="delete_opret_Click"></Button>
-            <Button Content="X"  x:Name="btndelete_close" FontSize="12" Click="btndelete_close_Click" Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>
 
+            <Button Content="Søg" Canvas.Left="428" Canvas.Top="129" Width="77" x:Name="sog" Click="sog_Click"></Button>
+            <Button Content="X"  x:Name="btnsaldo_close" FontSize="12" Click="btnsaldo_close_Click"  Canvas.Left="619" Canvas.Top="40" Panel.ZIndex="3" Width="22"/>
 
+            <DataGrid  x:Name="dtg_searchedsaldo" ItemsSource="{Binding}" BorderBrush="{x:Null}" BorderThickness="0" Height="169" Width="408" Canvas.Left="246" Canvas.Top="195"></DataGrid>
 
 
         </Canvas>

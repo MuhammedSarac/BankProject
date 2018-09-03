@@ -104,13 +104,14 @@
                 <Button Height="50" x:Name="indsat_btn" Click="indsat_btn_Click" Style="{DynamicResource menubuttons}">
                     <DockPanel Width="220" Height="50" Margin="15,0,0,0">
                         <Image Source="images/moneyadd.png" Height="50" Width="50" />
-                        <Label Content="Indsæt penge" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <Label Content="Transaktion" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </DockPanel>
                 </Button>
-                <Button Height="50" x:Name="udbetal_btn" Click="udbetal_btn_Click" Style="{DynamicResource menubuttons}">
+                
+                <Button Height="50" x:Name="Saldo_btn" Click="Saldo_btn_Click" Style="{DynamicResource menubuttons}">
                     <DockPanel Width="220" Height="50" Margin="15,0,0,0">
                         <Image Source="images/moneyrec.png" Height="50" Width="50" />
-                        <Label Content="Udbetal penge" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <Label Content="Saldo" Foreground="Black"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </DockPanel>
                 </Button>
                 <Button Height="50" x:Name="slet_kunde" Click="slet_kunde_Click" Style="{DynamicResource menubuttons}">
@@ -127,7 +128,7 @@
                 </Button>
 
 
-                <Label Content="Slette Konto" Foreground="Black"  FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="ConnectionStatus"/>
+                <Label Content="" Foreground="Black"  FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="ConnectionStatus"/>
 
 
             </StackPanel>

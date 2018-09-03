@@ -8,14 +8,14 @@ namespace BankProject.Classes
 {
     class Konto
     {
-        private int _KundeCprNr;
+        private long _KundeCprNr;
         private string _KontoName;
-        private int _KontoNr;
-        private decimal _Saldo;
-        private int _Rente;
-        private int _CreateDato;
+        private long _KontoNr;
+        private double _Saldo;
+        private double _Rente;
+        private string _CreateDato;
 
-        public int KundeCprNr
+        public long KundeCprNr
         {
             set { _KundeCprNr = value; }
             get { return _KundeCprNr; }
@@ -27,31 +27,31 @@ namespace BankProject.Classes
             get { return _KontoName; }
         }
 
-        public decimal Saldo
+        public double Saldo
         {
             set { _Saldo = value; }
             get { return _Saldo; }
         }
 
-        public int Rente
+        public double Rente
         {
             set { _Rente = value; }
             get { return _Rente; }
         }
 
-        public int CreateDato
+        public string CreateDato
         {
             get => _CreateDato;
             set => _CreateDato = value;
         }
-        public int KontoNr
+        public long KontoNr
 
         {
             get => _KontoNr;
             set => _KontoNr = value;
         }
 
-        public Konto(int kundecprnr, string kontoname, int kontonr, int saldo, int rente, int dato)
+        public Konto(long kundecprnr,string kontoname, long kontonr, double saldo, double rente, string dato)
         {
             KundeCprNr = kundecprnr;
             KontoName = kontoname;
@@ -62,7 +62,7 @@ namespace BankProject.Classes
         }
         public override string ToString()
         {
-            return string.Format($"Kunde Cpr Nr: {KundeCprNr}Konto Navn: {KontoName} Kontonr: {KontoNr} Saldo: {Saldo} Rente: {Rente} OprettelsesDato {CreateDato}");
+            return string.Format($"Kunde Cpr Nr: {KundeCprNr}Konto Navn: {KontoName}Kontonr: {KontoNr} Saldo: {Saldo} Rente: {Rente} OprettelsesDato {CreateDato}");
         }
     }
 }

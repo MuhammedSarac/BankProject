@@ -28,7 +28,7 @@
             <Label Content="Rente :" Canvas.Left="264" Canvas.Top="188" Width="66"/>
             <TextBox Width="163" Canvas.Left="342" Canvas.Top="188" Height="21" x:Name="txt_rente"/>
             <Label Content="Dato :" Canvas.Left="264" Canvas.Top="214"/>
-            <TextBox Width="163" Canvas.Left="342" Canvas.Top="214" Height="21" x:Name="txt_dato"/>
+            <DatePicker Width="163" Canvas.Left="342" Canvas.Top="214" Height="21" x:Name="txt_dato"/>
 
             <Button Content="Opret" Canvas.Left="428" Canvas.Top="250" Width="77" x:Name="kontobtn_opret" Click="kontobtn_opret_Click"></Button>
 

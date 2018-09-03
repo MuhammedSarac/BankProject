@@ -37,7 +37,7 @@ namespace BankProject
 
         private void udbetal_opret_Click(object sender, RoutedEventArgs e)
         {
-            if (txt_konto.Text != "" && txt_belob.Text != "" )
+            if (txt_konto.Text != "" && txt_belob.Text != "" && txt_date.Text != "")
             {
 
             }
